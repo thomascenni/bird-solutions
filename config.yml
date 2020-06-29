@@ -1,0 +1,14 @@
+title: "Bird Solutions"
+baseline: "Digital solutions for every needs."
+baseurl: https://thomascenni.com/
+description: "Bird Solutions provides solutions for custom application development, deployment and maintenance."
+author:
+  name: Thomas Cenni
+  url: https://thomascenni.com
+static:
+  exclude:
+    - "main.js"
+    - "main.scss"
+    - "**/bulma-scss"
+date:
+  timezone: "America/Sao_Paulo"

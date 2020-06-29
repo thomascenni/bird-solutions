@@ -1,0 +1,17 @@
+{% extends '_default/page.html.twig' %}
+
+{% block content %}
+{{ parent() }}
+
+<section class="section">
+    <div class="container">
+        <ul>
+            {% for term in page.terms %}
+            <li>
+                <h2><a href="{{ url(page.path ~ '/' ~ term.id) }}">{{ term.name }}</a> ({{ term|length }})</h2>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,17 @@
+[build]
+  command = "chmod +x .netlify/build.sh && bash .netlify/build.sh"
+  publish = "_site"
+  environment = { PHP_VERSION = "7.2", CECIL_VERSION = "5.32.0" }
+
+[context.deploy-preview]
+  command = "chmod +x .netlify/build.sh && bash .netlify/build.sh preview"
+
+[context.branch-deploy]
+  command = "chmod +x .netlify/build.sh && bash .netlify/build.sh preview"
+
+[template.environment]
+  CECIL_TITLE = "Bird Solutions"
+  CECIL_BASELINE = "Digital solutions for your company needs."
+  CECIL_DESCRIPTION = "Bird Solutions provides solutions for custom application development, deployment and maintenance."
+  CECIL_AUTHOR = "Thomas Cenni"
+  CECIL_THEME = "Custom theme."

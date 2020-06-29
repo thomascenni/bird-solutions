@@ -1,0 +1,14 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap');
+@import "bulma-scss/utilities/initial-variables";
+$family-sans-serif: 'Monda', sans-serif;
+// Customize colors https://bulma.io/documentation/overview/colors/
+$blue: #33658A;
+$cyan: #86BBD8;
+$dark: #2F4858;
+$yellow: #F6AE2D;
+$red: #F26419;
+$primary: $blue;
+$navbar-height: 4rem;               // was 3.25rem
+$navbar-item-img-max-height: 2rem;  // was 1.75rem	
+@import "bulma-scss/bulma.scss";

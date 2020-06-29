@@ -1,0 +1,71 @@
+{% if page.pages is defined %}
+{% set pages = page.pages %}
+{% endif %}
+{% if page.pagination.pages is defined %}
+{% set pages = page.pagination.pages %}
+{% endif %}
+
+{% extends '_default/page.html.twig' %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        {% for post in pages %}
+        {% if loop.index0 is divisible by(3) %}
+        <div class="columns">
+        {% endif %}
+            <div class="column is-one-third is-desktop">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-16by9">
+                            <img src="{{ post.image|resize(320) }}">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">
+                                    <a href="{{ url(post) }}">{{ post.title|e }}</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            {{ post.excerpt }}<br><br>
+                            <p>
+                                {{ post.date|date('j M Y') }} in <i class="far fa-folder"></i>&nbsp;
+                            {% with %}
+							{% set category=post.categories.0 %}
+                            <a href="{{ url('categories/'~category) }}">
+                                {{ category }}
+                            </a>
+                            {% endwith %}
+                            </p>
+                            {% if post.tags %}
+                            <div class="tags">
+                                {% for tag in post.tags %}
+                                <span class="tag is-rounded">
+                                    <a href="{{ url('tags/'~tag) }}">
+                                        {{ tag }}
+                                    </a>
+                                </span>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        {% if loop.index is divisible by(3) or loop.last %}
+        </div> <!-- end div columns-->
+        {% endif %}
+        {% else %}
+        <article class="message is-danger">
+            <div class="message-body">
+                Nenhum post encontrado.
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock content %}
