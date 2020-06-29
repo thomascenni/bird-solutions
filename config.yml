@@ -12,3 +12,7 @@ static:
     - "**/bulma-scss"
 date:
   timezone: "America/Sao_Paulo"
+menus:
+  main:
+    - id: index
+      enabled: false

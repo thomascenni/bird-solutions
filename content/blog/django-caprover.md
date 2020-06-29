@@ -8,13 +8,13 @@ categories: ["DevOps"]
 excerpt: Caprover is an open source tool which allows you to build your own PaaS server to host any type of applications and databases (NodeJS, Python, PHP, ASP.NET, Ruby, MySQL, MongoDB, Postgres, etc).
 image: '/images/django-caprover.png'
 ---
-[Caprover](https://caprover.com/) is an open source tool which allows you to build your own PaaS server to host any type of applications and databases (NodeJS, Python, PHP, ASP.NET, Ruby, MySQL, MongoDB, Postgres, etc). Compared to commercial applications, like Heroku, it is a great and cheaper alternative.
+<a href="https://caprover.com/" target="_blank">Caprover</a> is an open source tool which allows you to build your own PaaS server to host any type of applications and databases (NodeJS, Python, PHP, ASP.NET, Ruby, MySQL, MongoDB, Postgres, etc). Compared to commercial applications, like Heroku, it is a great and cheaper alternative.
 
 Today I’ll show you how to create a Django application and deploy to Caprover step by step. I assume that:
 
 * you have a Python virtual environment with Django installed (pip install django).
 
-* you have a Caprover server already installed. You can follow their [getting started](https://caprover.com/docs/get-started.html) guide, the installation is very easy.
+* you have a Caprover server already installed. You can follow their <a href="https://caprover.com/docs/get-started.html" target="_blank">getting started</a> guide, the installation is very easy.
 
 OK so let’s start. We create a project called **djcap**; you can use the name of the project that you want, but for this tutorial is important to remember this name because it will be used later.
 
@@ -23,9 +23,9 @@ OK so let’s start. We create a project called **djcap**; you can use the name 
     cd djcap
     python manage.py runserver
 
-This is the basic starting point of creating a Django project. If everything works fine, pointing the browser to [http://localhost:8000/](http://localhost:8000/) you’ll find a nice webpage:
+This is the basic starting point of creating a Django project. If everything works fine, pointing the browser to <a href="http://localhost:8000/" target="_blank">localhost:8000</a> you’ll see a nice webpage:
 
-![](https://cdn-images-1.medium.com/max/2620/1*KJWl95-ADERYT_lcHY-Z7g.png)
+![](/images/django-caprover-localhost.png)
 
 Nothing special until now. Remember to create a requirements.txt file to contain all your modules:
 
@@ -39,7 +39,7 @@ Create a file called captain-definition with the following contents:
 
 This basically tells Caprover to look for a Dockerfile in the root of your project. Now we will use a Docker image with python and nginx to run our web application. There are a lot of alternatives, but I came across this image
 
-[https://github.com/tiangolo/meinheld-gunicorn-docker](https://github.com/tiangolo/meinheld-gunicorn-docker)
+<a href="https://github.com/tiangolo/meinheld-gunicorn-docker" target="_blank">tiangolo/meinheld-gunicorn-docker</a>
 
 which totally satisfies my needs and is very limited in size because it uses Alpine Linux, a security-oriented and lightweight Linux distribution.
 
@@ -62,7 +62,8 @@ OK, now we will create a new application within our Caprover installation and de
 
 From the “Apps” menu, click on the button “One-Click Apps/Databases”:
 
-![](https://cdn-images-1.medium.com/max/2000/1*nJn3FdZ9ceoZNj_BlY7WbQ.png)
+![](/images/django-caprover-new-app.png)
+
 
 Then from the “One-Click Apps List”, select **>> TEMPLATE <<**. 
 This list is used if you want to install some already tested and available apps, or, like in our case, if we want to install a custom application. A text box will open, and inside it copy and paste the contents of this file:
@@ -72,9 +73,12 @@ This list is used if you want to install some already tested and available apps,
 Click “Next”.
 In the following page, the only field you need to fill is the “App Name”; chose the name you want, but remember that the field “MODULE_NAME” needs to be coherent with the name of the project you choose when you created the Django project (in my case, “djcap.wsgi”).
 
+![](/images/django-caprover-new-app-config.png)
+
 Click the button Deploy. Basically an empty application based on Alpine 3.8 is created with the correct Environmental Variables needed to run it.
 
-![](https://cdn-images-1.medium.com/max/2832/1*_2pxpRHrgOtG-gjwverIsw.png)
+![](/images/django-caprover-new-app-environment.png)
+
 
 Good. At this time, no application is running. It is time to deploy the real Django application.
 
@@ -88,8 +92,8 @@ Then, always in the root directory of the Django project, run the command:
 
 You’ll be asked to enter the URL of the Caprover server, the name of the application and a password. Once the image is built, you can follow the application logs and see that gunicorn is running and serving your Django app.
 
-![](https://cdn-images-1.medium.com/max/2294/1*y6g1AQLZ19F40xCuZrFkDg.png)
+![](/images/django-caprover-new-app-deployed.png)
 
-You’ll find the project in my Github repository: [https://github.com/thomascenni/djcap](https://github.com/thomascenni/djcap)
+You’ll find the project in my Github repository: <a href="https://github.com/thomascenni/djcap" target="_blank">thomascenni/djcap</a>.
 
 N.B.: for production, remember to set Debug=False and SECRET_KEY as an additional environment variable. For correct static files serving, you should use <a href="http://whitenoise.evans.io/en/stable/django.html" target="_blank">WhiteNoise</a>.
