@@ -16,3 +16,4 @@ menus:
   main:
     - id: index
       enabled: false
+googleanalytics: "UA-96532361-1"
