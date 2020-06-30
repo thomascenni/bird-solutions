@@ -17,6 +17,16 @@
       <link rel="canonical" href="{{ url(page, {canonical:true}) }}" />
       <meta property="og:url" content="{{ url(page, {canonical:true}) }}" />
       <meta property="og:site_name" content="{{ site.title }}" />
+      {% if page.section is defined and page.section=='blog' %}
+      <meta property="og:type" content="article" />
+      <meta property="article:author" content="Thomas Cenni">
+      <meta property="article:section" content="{{ page.categories.0 }}">
+      {% else %}
+      <meta property="og:type" content="website" />
+      {% endif %}
+      {% if page.image is defined %}
+      <meta property="og:image" content="{{ url(page.image, {canonical:true}) }}" />
+      {% endif %}
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
       <link rel="stylesheet" href="{{ url(asset('main.scss')|to_css) }}">
       {% include 'partials/alternates.html.twig' %}
