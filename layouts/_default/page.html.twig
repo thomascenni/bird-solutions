@@ -84,6 +84,7 @@
                   </p>
             </div>
       </footer>
+      {% block extrabody %}{% endblock extrabody %}
       {% include 'partials/googleanalytics.js.twig' %}
       <script src="{{ url(asset('main.js')|minify) }}"></script>
 </body>

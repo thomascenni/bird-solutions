@@ -1,0 +1,107 @@
+{
+    "dataSource": {
+        "dataSourceType": "csv",
+        "filename": "/images/anfavea-data.csv"
+    },
+    "slice": {
+        "rows": [
+            {
+                "uniqueName": "Segmento"
+            },
+            {
+                "uniqueName": "Associada"
+            },
+            {
+                "uniqueName": "Grupo"
+            },
+            {
+                "uniqueName": "Marca"
+            }
+        ],
+        "columns": [
+            {
+                "uniqueName": "Measures"
+            }
+        ],
+        "measures": [
+            {
+                "uniqueName": "Jan",
+                "aggregation": "sum"
+            },
+            {
+                "uniqueName": "Fev",
+                "aggregation": "sum"
+            },
+            {
+                "uniqueName": "Mar",
+                "aggregation": "sum"
+            },
+            {
+                "uniqueName": "Abr",
+                "aggregation": "sum"
+            },
+            {
+                "uniqueName": "Mai",
+                "aggregation": "sum"
+            },
+            {
+                "uniqueName": "Jun",
+                "aggregation": "sum"
+            },
+            {
+                "uniqueName": "Jul",
+                "aggregation": "sum"
+            },
+            {
+                "uniqueName": "Ago",
+                "aggregation": "sum"
+            },
+            {
+                "uniqueName": "Set",
+                "aggregation": "sum"
+            },
+            {
+                "uniqueName": "Out",
+                "aggregation": "sum"
+            },
+            {
+                "uniqueName": "Nov",
+                "aggregation": "sum"
+            },
+            {
+                "uniqueName": "Dez",
+                "aggregation": "sum"
+            }
+        ],
+        "expands": {
+            "rows": [
+                {
+                    "tuple": [
+                        "Segmento.Automóveis",
+                        "Associada.Empresas associadas à Anfavea"
+                    ]
+                },
+                {
+                    "tuple": [
+                        "Segmento.Automóveis",
+                        "Associada.Empresas associadas à Anfavea",
+                        "Grupo.BMW"
+                    ]
+                },
+                {
+                    "tuple": [
+                        "Segmento.Automóveis",
+                        "Associada.Empresas associadas à Anfavea",
+                        "Grupo.Audi"
+                    ]
+                },
+                {
+                    "tuple": [
+                        "Segmento.Caminhões",
+                        "Associada.Empresas associadas à Anfavea"
+                    ]
+                }
+            ]
+        }
+    }
+}
