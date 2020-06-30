@@ -1,17 +1,17 @@
 ---
-title: 'Data analysis with Pandas and Webdatarocks'
+title: 'Data analysis with Pandas, WebDataRocks and Datapane'
 date: '2019-11-19'
 draft: false
 layout: page-anfavea
-slug: 'data-analysis-with-pandas-and-webdatarocks'
-tags: ["pandas", "webdatarocks", "python"]
+slug: 'data-analysis-with-pandas-webdatarocks-and-datapane'
+tags: ["pandas", "webdatarocks", "python", "datapane"]
 categories: ["Data Analysis"]
-excerpt: Pandas is a great tool to clean and manipulate data. This post shows an example applied to the Brazilian automotive market.
+excerpt: Pandas is a great tool to clean and manipulate data. This post shows an example of data analysis and visualization, applied to the Brazilian automotive market.
 image: '/images/anfavea.jpg'
 ---
 
-Anfavea, the National Association of Motor Vehicle Manufacturers in Brazil, discloses in its website some monthly statistics about the production and licensing of vehicles.
-People in the automotive market who use these data (http://www.anfavea.com.br/estatisticas) for analysis and forecast, certainly encountered various limitations in the Excel file available for download: the report looks like a PowerPoint presentation, with indented cells, values referring to subtotals in the middle of the lines and other small details that make it very difficult to use.
+[Anfavea](http://www.anfavea.com.br/), the National Association of Motor Vehicle Manufacturers in Brazil, discloses in its website some monthly statistics about the production and licensing of vehicles.
+People in the automotive market who use these [data](http://www.anfavea.com.br/estatisticas) for analysis and forecast, certainly encountered various limitations in the Excel file available for download: the report looks like a PowerPoint presentation, with indented cells, values referring to subtotals in the middle of the lines and other small details that make it very difficult to use.
 
 ![](/images/anfavea-excel.png)
 
@@ -43,4 +43,17 @@ This is the result:
 
 <div id="wdr-component"></div>
 <br/>
+And what about the possibility to execute the script, obtain some reports and be able to interact ?
+For example setting the year of the analysis.
+
+I discovered that there is a tool that allows you to do that: [Datapane](https://datapane.com/)
+
+The report is available here:
+
+<iframe src="https://datapane.com/thomas7/reports/anfavea-data-analysis_862f27f7/embed/" width="100%" height="540px" frameBorder="0">Iframe not supported.</iframe>
+
+If you want to play with the script, it is public and available [here](https://datapane.com/thomas7/scripts/anfavea_data_analysis/).
+
 Enjoy!
+
+Thomas Cenni
