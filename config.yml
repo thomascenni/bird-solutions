@@ -11,7 +11,7 @@ static:
     - "main.scss"
     - "**/bulma-scss"
 date:
-  timezone: "America/Sao_Paulo"
+  timezone: "Europe/Paris"
 menus:
   main:
     - id: index

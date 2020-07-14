@@ -1,6 +1,6 @@
 ---
 title: 'Data analysis with Pandas, WebDataRocks and Datapane'
-date: '2019-11-19'
+date: '2020-07-14'
 draft: false
 layout: page-anfavea
 slug: 'data-analysis-with-pandas-webdatarocks-and-datapane'
