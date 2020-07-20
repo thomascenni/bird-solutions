@@ -3,7 +3,7 @@ title: 'Deploy a Django application with Caprover'
 date: '2019-12-12'
 draft: false
 slug: 'deploy-a-django-application-with-caprover'
-tags: ["django", "caprover", "docker"]
+tags: ["Django", "Caprover", "Docker"]
 categories: ["DevOps"]
 excerpt: Caprover is an open source tool which allows you to build your own PaaS server to host any type of applications and databases (NodeJS, Python, PHP, ASP.NET, Ruby, MySQL, MongoDB, Postgres, etc).
 image: '/images/django-caprover.png'

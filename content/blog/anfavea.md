@@ -4,7 +4,7 @@ date: '2020-07-14'
 draft: false
 layout: page-anfavea
 slug: 'data-analysis-with-pandas-webdatarocks-and-datapane'
-tags: ["pandas", "webdatarocks", "python", "datapane"]
+tags: ["Pandas", "WebDataRocks", "Python", "Datapane"]
 categories: ["Data Analysis"]
 excerpt: Pandas is a great tool to clean and manipulate data. This post shows an example of data analysis and visualization, applied to the Brazilian automotive market.
 image: '/images/anfavea.jpg'
