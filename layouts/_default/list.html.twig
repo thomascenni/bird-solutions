@@ -18,7 +18,7 @@
 			<div class="column is-one-third is-desktop">
 				<div class="card">
 					<div class="card-image">
-						<figure class="image is-3by2">
+						<figure class="image is-4by3">
 							<img src="{{ project.image|resize(320) }}">
 						</figure>
 					</div>
@@ -33,7 +33,12 @@
 						<div class="content">
 							{{ project.excerpt }}<br><br>
 							<p>
-								{{ project.date|date('j M Y') }}<br>
+								{% if project.section == 'portfolio' %}
+								{{ project.date|date('M Y') }}
+								{% else %}
+								{{ project.date|date('j M Y') }}
+								{% endif %}
+								<br><br>
 								<i class="far fa-folder"></i>&nbsp;
 								{% with %}
 								{% set category=project.categories.0 %}

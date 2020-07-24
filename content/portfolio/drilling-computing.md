@@ -4,7 +4,7 @@ date: '2018-04'
 draft: false
 tags: ["Django", "MongoDB", "Celery", "Redis"]
 categories: ["Web Application"]
-excerpt: Web application to develop directional plans.
+excerpt: A powerful web application to develop directional plans for the Oil & Gas field.
 image: '/images/drilling-computing.jpg'
 ---
 
