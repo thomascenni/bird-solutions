@@ -10,6 +10,8 @@ static:
     - "main.js"
     - "main.scss"
     - "**/bulma-scss"
+pagination:
+  max: 6
 date:
   timezone: "Europe/Paris"
 menus:
