@@ -1,16 +1,20 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap');
+
+// @import url("https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
 @import "bulma-scss/utilities/initial-variables";
-$family-sans-serif: 'Monda', sans-serif;
+$family-sans-serif: "Rubik", sans-serif;
+
 // Customize colors https://bulma.io/documentation/overview/colors/
-$blue: #33658A;
-$cyan: #86BBD8;
-$dark: #2F4858;
-$yellow: #F6AE2D;
-$red: #F26419;
+$blue: #33658a;
+$cyan: #86bbd8;
+$dark: #2f4858;
+$yellow: #f6ae2d;
+$red: #f26419;
 $primary: $blue;
-$navbar-height: 4rem;               // was 3.25rem
-$navbar-item-img-max-height: 2rem;  // was 1.75rem	
+$navbar-height: 4rem; // was 3.25rem
+$navbar-item-img-max-height: 2rem; // was 1.75rem
 @import "bulma-scss/bulma.scss";
 
 .hero.has-background {
@@ -28,4 +32,14 @@ $navbar-item-img-max-height: 2rem;  // was 1.75rem
 
 .hero-background.is-transparent {
     opacity: 0.3;
+}
+
+// for giving cards same height
+.bm--card-equal-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.bm--card-equal-height .card-footer {
+    margin-top: auto;
 }

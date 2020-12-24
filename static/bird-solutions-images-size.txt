@@ -1,0 +1,4 @@
+4by3
+640 x 480
+1280 x 960 <<< best option for new images <<<
+cecil -> resize (320) = metá di 640
