@@ -50,7 +50,7 @@ I discovered that there is a tool that allows you to do that: [Datapane](https:/
 
 The report is available here:
 
-<iframe src="https://datapane.com/thomas7/reports/anfavea-data-analysis_862f27f7/embed/" width="100%" height="540px" frameBorder="0">Iframe not supported.</iframe>
+<iframe src="https://datapane.com/u/thomas7/reports/anfavea-data-analysis/embed/" width="100%" height="540px" frameBorder="0">Iframe not supported.</iframe>
 
 If you want to play with the script, it is public and available [here](https://datapane.com/thomas7/scripts/anfavea_data_analysis/).
 

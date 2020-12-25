@@ -1,7 +1,7 @@
 {
     "dataSource": {
         "dataSourceType": "csv",
-        "filename": "/images/anfavea-data.csv"
+        "filename": "https://raw.githubusercontent.com/thomascenni/anfavea-data-analysis/master/anfavea_data_analysis.csv"
     },
     "slice": {
         "rows": [
