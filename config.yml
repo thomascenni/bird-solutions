@@ -9,7 +9,7 @@ static:
   exclude:
     - "main.js"
     - "main.scss"
-    - "**/bulma-scss"
+    - "bulma-scss"
 pagination:
   max: 6
 date:
