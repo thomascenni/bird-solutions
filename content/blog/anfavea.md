@@ -18,7 +18,9 @@ People in the automotive market who use these [data](http://www.anfavea.com.br/e
 To make these data useful, I developed a Python script with a powerful analysis tool called [Pandas](https://pandas.pydata.org/), in order to be able to clean the original data and create a new Excel or CSV file.
 Here's the code:
 
-![](/images/anfavea-python-code.png)
+<div class="content is-size-6">
+<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fthomascenni%2Fanfavea-data-analysis%2Fblob%2Fmaster%2Fanfavea_analysis.py&style=tomorrow-night&showBorder=on&showLineNumbers=on&showFileMeta=on&ts=1"></script>
+</div>
 
 OK, so now we have a new Excel file; but what about the possibility to create a Pivot Table and render it on this webpage to be able to filter the data, for example by segments (cars or trucks) ?
 
@@ -52,7 +54,6 @@ The report is available here:
 
 <iframe src="https://datapane.com/u/thomas7/reports/anfavea-data-analysis/embed/" width="100%" height="540px" frameBorder="0">Iframe not supported.</iframe>
 
-If you want to play with the script, it is public and available [here](https://datapane.com/thomas7/scripts/anfavea_data_analysis/).
 
 Enjoy!
 
